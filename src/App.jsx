@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
+<<<<<<< HEAD
   const [mensaje, setMensaje] = useState(
     "Producción musical, mezcla y masterización profesional"
   );
@@ -101,6 +102,27 @@ function App() {
       <footer>
         <p>© 2026 YAEL.WAV Studio</p>
       </footer>
+=======
+  const [mensaje, setMensaje] = useState("Bienvenido a Yael.wav");
+
+  return (
+    <div className="container">
+      <h1>YAEL.WAV</h1>
+
+      <p>{mensaje}</p>
+
+      <button onClick={() => setMensaje("Gracias por visitar mi proyecto yaelwav :)")}>
+        
+      </button>
+
+      <h2>Servicios</h2>
+
+      <ul>
+        <li>Producción musical</li>
+        <li>Mezcla</li>
+        <li>Masterización</li>
+      </ul>
+>>>>>>> 36b2b4420e3cfed6730ec870bb136a506cf49370
     </div>
   );
 }

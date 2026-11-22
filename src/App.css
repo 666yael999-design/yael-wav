@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -122,3 +123,28 @@ footer {
   margin-top: 40px;
   border-top: 1px solid rgba(255,255,255,.1);
 }
+=======
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  padding: 50px;
+}
+
+button {
+  background: purple;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #a855f7;
+}
+>>>>>>> 36b2b4420e3cfed6730ec870bb136a506cf49370

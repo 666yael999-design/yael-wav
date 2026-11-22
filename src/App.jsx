@@ -2,10 +2,18 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-<<<<<<< HEAD
   const [mensaje, setMensaje] = useState(
     "Producción musical, mezcla y masterización profesional"
   );
+
+  const mostrarBienvenida = () => {
+    setMensaje("🎵 ¡Bienvenido a YAEL.WAV Studio! Gracias por visitarnos 🎵");
+  };
+
+  const enviarFormulario = (e) => {
+    e.preventDefault();
+    alert("✅ Mensaje enviado correctamente");
+  };
 
   return (
     <div className="container">
@@ -14,14 +22,7 @@ function App() {
 
         <p className="subtitle">{mensaje}</p>
 
-        <button
-          className="btn"
-          onClick={() =>
-            setMensaje(
-              "🎵 ¡Bienvenido a YAEL.WAV Studio! Gracias por visitarnos 🎵"
-            )
-          }
-        >
+        <button className="btn" onClick={mostrarBienvenida}>
           Bienvenida
         </button>
       </header>
@@ -60,26 +61,15 @@ function App() {
 
         <p>
           En YAEL.WAV buscamos apoyar a artistas y creadores de contenido
-          mediante servicios de producción musical, mezcla y masterización de
-          manera accesible y personalizada.
+          mediante servicios de producción musical, mezcla y masterización.
         </p>
       </section>
 
       <section className="contact">
         <h2>Contacto</h2>
 
-        <form
-          className="contact-form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            alert("✅ Mensaje enviado correctamente");
-          }}
-        >
-          <input
-            type="text"
-            placeholder="Nombre"
-            required
-          />
+        <form className="contact-form" onSubmit={enviarFormulario}>
+          <input type="text" placeholder="Nombre" required />
 
           <input
             type="email"
@@ -91,7 +81,7 @@ function App() {
             placeholder="Escribe tu mensaje"
             rows="5"
             required
-          ></textarea>
+          />
 
           <button type="submit" className="btn">
             Enviar Mensaje
@@ -102,27 +92,6 @@ function App() {
       <footer>
         <p>© 2026 YAEL.WAV Studio</p>
       </footer>
-=======
-  const [mensaje, setMensaje] = useState("Bienvenido a Yael.wav");
-
-  return (
-    <div className="container">
-      <h1>YAEL.WAV</h1>
-
-      <p>{mensaje}</p>
-
-      <button onClick={() => setMensaje("Gracias por visitar mi proyecto yaelwav :)")}>
-        
-      </button>
-
-      <h2>Servicios</h2>
-
-      <ul>
-        <li>Producción musical</li>
-        <li>Mezcla</li>
-        <li>Masterización</li>
-      </ul>
->>>>>>> 36b2b4420e3cfed6730ec870bb136a506cf49370
     </div>
   );
 }
